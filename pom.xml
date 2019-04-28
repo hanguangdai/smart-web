@@ -45,7 +45,7 @@
   </dependencies>
 
   <build>
-    <defaultGoal>install</defaultGoal>
+    <!--<defaultGoal>install</defaultGoal>-->
 
     <plugins>
       <plugin>
@@ -71,33 +71,17 @@
       <!--通过Maven将应用不是到Tomcat中-->
       <plugin>
         <groupId>org.apache.tomcat.maven</groupId>
-        <artifactId>tomcat8-maven-plugin</artifactId>
-        <version>3.0-r1655215</version>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
         <configuration>
-          <path>/${project.artifactId}</path>
           <port>8090</port>
+          <path>/</path>
+          <uriEncoding>UTF-8</uriEncoding>
+          <server>tomcat7</server>
         </configuration>
       </plugin>
     </plugins>
 
   </build>
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>alfresco-public</id>
-      <url>https://artifacts.alfresco.com/nexus/content/groups/public</url>
-    </pluginRepository>
-    <pluginRepository>
-      <id>alfresco-public-snapshots</id>
-      <url>https://artifacts.alfresco.com/nexus/content/groups/public-snapshots</url>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>daily</updatePolicy>
-      </snapshots>
-    </pluginRepository>
-    <pluginRepository>
-      <id>beardedgeeks-releases</id>
-      <url>http://beardedgeeks.googlecode.com/svn/repository/releases</url>
-    </pluginRepository>
-  </pluginRepositories>
 </project>
