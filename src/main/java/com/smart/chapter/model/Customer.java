@@ -1,11 +1,14 @@
 package com.smart.chapter.model;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 /**
  * @description: 客户信息实体对象
  * @author: daihanguang
  * @create: 2019-04-29 11:47
  */
-public class Customer {
+public class Customer extends BaseModel{
 
     /** 标记id*/
     private long id;
@@ -67,4 +70,5 @@ public class Customer {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+
 }

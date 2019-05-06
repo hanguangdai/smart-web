@@ -14,13 +14,30 @@
   <packaging>war</packaging>
 
   <properties>
+    <junit.version>4.12</junit.version>
+    <slf4j.version>1.7.26</slf4j.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <servlet-api.version>3.1.0</servlet-api.version>
     <jsp-api.version>2.2</jsp-api.version>
     <jst.version>1.2</jst.version>
+    <mysql.version>8.0.16</mysql.version>
+    <dbutils.version>1.7</dbutils.version>
+    <dbcp2.version>2.6.0</dbcp2.version>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
     <!--Servlet provided:只参与编译,不参与打包(tomcat中也有servlet-api包,会冲突)-->
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -41,6 +58,31 @@
       <artifactId>jstl</artifactId>
       <version>${jst.version}</version>
       <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.9</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+      <version>4.3</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-dbutils</groupId>
+      <artifactId>commons-dbutils</artifactId>
+      <version>${dbutils.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-dbcp2</artifactId>
+      <version>${dbcp2.version}</version>
     </dependency>
   </dependencies>
 
