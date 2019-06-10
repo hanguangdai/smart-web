@@ -28,7 +28,7 @@ public class CustomerServiceTest {
 
     @Test
     public void getCustomerListTest() throws Exception{
-        List<Customer> customers = this.customerService.getCustomerList("测");
+        List<Customer> customers = this.customerService.getCustomerList("测验");
         System.out.println(customers);
     }
 
